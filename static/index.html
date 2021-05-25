@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="/css/bootstrap-icons.css" rel="stylesheet"><link href="/css/bootstrap.min.css" rel="stylesheet"><link rel="icon" href="/favicon.ico"><title>wallet</title><link rel="stylesheet/less" type="text/css" href="/css/styles.less"><script src="http://localhost:18000/cfg"></script><script>less = {
+        javascriptEnabled: true
+      }</script><script src="/js/less.js"></script><style>html,
+      body {
+        background: radial-gradient(
+          ellipse at bottom,
+          #1b2735 0%,
+          #090a0f 100%
+        );
+        overflow: hidden;
+        height: 100%;
+      }</style><link href="/css/wallet_transaction.59412cfb.css" rel="prefetch"><link href="/js/about.0b790ec6.js" rel="prefetch"><link href="/js/buy.f7fc6045.js" rel="prefetch"><link href="/js/file.8dda2c3e.js" rel="prefetch"><link href="/js/file~wallet_transaction.062a34ca.js" rel="prefetch"><link href="/js/wallet.6574baba.js" rel="prefetch"><link href="/js/wallet_transaction.3bde7401.js" rel="prefetch"><link href="/css/app.5a7265b6.css" rel="preload" as="style"><link href="/js/app.0b64bb11.js" rel="preload" as="script"><link href="/js/chunk-vendors.89b72ad5.js" rel="preload" as="script"><link href="/css/app.5a7265b6.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but wallet doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="star1"></div><div id="star2"></div><div id="star3"></div><div id="app"></div><script>function rands(n) {
+        return Array.from(Array(n).keys())
+          .map(_ => {
+            let x = Math.round(Math.random() * window.innerWidth)
+            let y1 = Math.round(Math.random() * window.innerHeight)
+            return (
+              x +
+              "px " +
+              y1 +
+              "px #fff," +
+              x +
+              "px " +
+              (y1 + window.innerHeight) +
+              "px #fff"
+            )
+          })
+          .join(",")
+      }
+      function setshadow() {
+        document.querySelector("#star1").style.boxShadow = rands(350)
+        document.querySelector("#star2").style.boxShadow = rands(100)
+        document.querySelector("#star3").style.boxShadow = rands(50)
+      }
+      window.onresize = function() {
+        less.modifyVars({})
+        setshadow()
+      }
+      setshadow()</script><script src="/js/bootstrap.bundle.min.js"></script><script src="/js/chunk-vendors.89b72ad5.js"></script><script src="/js/app.0b64bb11.js"></script></body></html>
