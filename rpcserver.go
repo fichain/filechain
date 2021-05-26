@@ -3490,7 +3490,7 @@ func handleSetGenerate(s *rpcServer, cmd interface{}, closeChan <-chan struct{})
 
 		// It's safe to call start even if it's already started.
 		// 默认情况下，只是用一个CPU来挖矿，挖矿不是目的，至少在很长一段时间内不是
-		s.cfg.CPUMiner.SetNumWorkers(2) //int32(genProcLimit)
+		s.cfg.CPUMiner.SetNumWorkers(1) //int32(genProcLimit)
 		s.cfg.CPUMiner.Start()
 	}
 	return nil, nil

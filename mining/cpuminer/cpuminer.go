@@ -280,6 +280,7 @@ func (m *CPUMiner) solveBlock(msgBlock *wire.MsgBlock, blockHeight int32,
 			// The block is solved when the new block hash is less
 			// than the target difficulty.  Yay!
 			hashbig := blockchain.HashToBig(&hash)
+			// log.Infof("Cmp diff %X vs %X", hashbig, targetDifficulty)
 			if hashbig.Cmp(targetDifficulty) <= 0 {
 				m.updateHashes <- hashesCompleted
 				return true

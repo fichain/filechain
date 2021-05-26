@@ -242,6 +242,7 @@ func newBlockManager(cfg *blockManagerCfg) (*blockManager, error) {
 	targetTimePerBlock := int64(cfg.ChainParams.TargetTimePerBlock / time.Second)
 	adjustmentFactor := cfg.ChainParams.RetargetAdjustmentFactor
 
+	log.Infof("初始化块管理器，初始化参数是: %X", cfg.ChainParams.PowLimitBits)
 	bm := blockManager{
 		cfg:           cfg,
 		peerChan:      make(chan interface{}, MaxPeers*3),

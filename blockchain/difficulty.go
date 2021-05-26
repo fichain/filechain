@@ -243,7 +243,8 @@ func (b *BlockChain) calcNextRequiredDifficulty(lastNode *blockNode, newBlockTim
 			// The block was mined within the desired timeframe, so
 			// return the difficulty for the last block which did
 			// not have the special minimum difficulty rule applied.
-			return b.findPrevTestNetDifficulty(lastNode), nil
+			// 直接用上一个块的，不用调整了
+			// return b.findPrevTestNetDifficulty(lastNode), nil
 		}
 
 		// For the main network (or any unrecognized networks), simply
