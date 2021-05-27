@@ -3,3 +3,4 @@ cmd/btcctl/btcctl
 v1
 *.map
 fclinux
+fcarm
