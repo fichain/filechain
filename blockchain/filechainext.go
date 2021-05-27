@@ -288,37 +288,17 @@ var FCERejectRules = []FCEExecute{
 				return false, false, err
 			}
 
-			proof := &btcjson.AppealTransInfo{}
-			proof.FromBytes(params.Params[0].([]byte), true)
-			sigdata := proof.ToBytes(false)
-			messageHash := chainhash.DoubleHashB(sigdata)
-			//从证明的签名数据中解析出地址
-			pubkey, _, err := btcec.RecoverCompact(btcec.S256(), proof.Sig, messageHash)
-			if err != nil {
-				return false, false, err
-			}
-			// addr, err := btcutil.DecodeAddress(string(depositAddr), chain.chainParams)
-			// if err != nil {
-			// 	return false, false, err
-			// }
-			pubKeyHash := btcutil.Hash160(pubkey.SerializeCompressed())
-			log.Info("签名中包含的公钥是:", hex.EncodeToString(pubKeyHash))
-			log.Info("购买者的地址是:", string(buyinfo.Buyer))
 			depositAddr, err := btcutil.DecodeAddress(string(buyinfo.Buyer), chain.chainParams)
 			if err != nil {
 				return false, false, err
 			}
-			switch depositAddr.(type) {
-			case *btcutil.AddressWitnessPubKeyHash:
-				if !bytes.Equal(depositAddr.ScriptAddress(), pubKeyHash) {
-					return false, false, fmt.Errorf("证明签名校验出错，证明数据里包含的签名不是接收者的地址不吻合 %s != %s", hex.EncodeToString(depositAddr.ScriptAddress()), hex.EncodeToString(pubKeyHash))
-				}
-			default:
-				return false, false, fmt.Errorf("不支持的地址格式")
+			proof := &btcjson.AppealTransInfo{}
+			proof.FromBytes(params.Params[0].([]byte), true)
+			if err := ValidateProof(params.Params[0].([]byte), &depositAddr, buyinfo.BuyHash, string(proof.Transfer), btcutil.Amount(proof.Amount)); err != nil {
+				return false, false, err
 			}
 
 			// 现在，我们能证明这个签名确实是由购买者本人发起的
-
 			if chain.bestChain.Height() < buyinfo.PayBlockHeight+100 {
 				//这种情况下要证明购买者确实少发了传输费，申诉才能起作用
 				//检查TxIn中的 Proof
@@ -634,6 +614,44 @@ func FileChainMaybeAcceptTransaction(utxos *UtxoViewpoint, tx *btcutil.Tx) error
 				return err
 			}
 		}
+	}
+	return nil
+}
+
+// 收到购买方的传输费证明以后，确认签名是否有效
+func ValidateProof(proof []byte, buyer *btcutil.Address, buyhash []byte, transfer string, amount btcutil.Amount) error {
+	var info btcjson.AppealTransInfo
+	if err := info.FromBytes(proof, true); err != nil {
+		return err
+	}
+	if info.Amount < int64(amount) {
+		return fmt.Errorf("证明中的金额 %d 少于需要证明的金额: %d", info.Amount, int64(amount))
+	}
+
+	if !bytes.Equal(info.BuyHash, buyhash) {
+		return fmt.Errorf("证明中的文件hash不等于需要被证明的哈希")
+	}
+
+	if string(info.Transfer) != transfer {
+		return fmt.Errorf("证明中的传输者不等于需要被证明的传输者")
+	}
+
+	sigdata := info.ToBytes(false)
+	messageHash := chainhash.DoubleHashB(sigdata)
+	//从证明的签名数据中解析出地址
+	pubkey, _, err := btcec.RecoverCompact(btcec.S256(), info.Sig, messageHash)
+	if err != nil {
+		return err
+	}
+	pubKeyHash := btcutil.Hash160(pubkey.SerializeCompressed())
+	log.Info("签名中包含的公钥是:", hex.EncodeToString(pubKeyHash))
+	switch (*buyer).(type) {
+	case *btcutil.AddressWitnessPubKeyHash:
+		if !bytes.Equal((*buyer).ScriptAddress(), pubKeyHash) {
+			return fmt.Errorf("证明签名校验出错，证明数据里包含的签名不是接收者的地址不吻合 %s != %s", hex.EncodeToString((*buyer).ScriptAddress()), hex.EncodeToString(pubKeyHash))
+		}
+	default:
+		return fmt.Errorf("不支持的地址格式")
 	}
 	return nil
 }

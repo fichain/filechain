@@ -2226,28 +2226,7 @@ func getProof(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) 
 	if err != nil {
 		return nil, err
 	}
-
-	info := btcjson.AppealTransInfo{
-		BuyHash:  buyhash,
-		Transfer: []byte(cmd.Transfer),
-		Amount:   int64(amount),
-	}
-
-	sigdata := info.ToBytes(false)
-	messageHash := chainhash.DoubleHashB(sigdata)
-	privKey, err := w.PrivKeyForAddress(buyaddr)
-	if err != nil {
-		return nil, err
-	}
-
-	sigbytes, err := btcec.SignCompact(btcec.S256(), privKey,
-		messageHash, true)
-	if err != nil {
-		return nil, err
-	}
-	info.Sig = sigbytes
-	bs := info.ToBytes(true)
-	return hex.EncodeToString(bs), nil
+	return w.GetProof(&buyaddr, buyhash, cmd.Transfer, amount)
 }
 
 // 发布一个文件hash

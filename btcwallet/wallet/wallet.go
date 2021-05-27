@@ -1763,6 +1763,37 @@ func (w *Wallet) LabelTransaction(hash chainhash.Hash, label string,
 	})
 }
 
+// 传输方在传输内容给购买方以后，需要从购买方得到一个证明，证明自己已经成功传输了内容，
+// 如果购买方在最终的传输确认时候确认的传输费少于证明中的传输费，则可以用这个证明进行申诉
+// 调用此API前需要先解锁钱包
+// buyer: 购买者地址，必须是自己的有效钱包地址
+// buyhash: 购买哪个文件
+// transfer: 传输者地址，是一个标准的字符串编码的地址
+// amount: 要证明的传输费金额
+func (w *Wallet) GetProof(buyer *btcutil.Address, buyhash []byte, transfer string, amount btcutil.Amount) ([]byte, error) {
+	info := btcjson.AppealTransInfo{
+		BuyHash:  buyhash,
+		Transfer: []byte(transfer),
+		Amount:   int64(amount),
+	}
+
+	sigdata := info.ToBytes(false)
+	messageHash := chainhash.DoubleHashB(sigdata)
+	privKey, err := w.PrivKeyForAddress(*buyer)
+	if err != nil {
+		return nil, err
+	}
+
+	sigbytes, err := btcec.SignCompact(btcec.S256(), privKey,
+		messageHash, true)
+	if err != nil {
+		return nil, err
+	}
+	info.Sig = sigbytes
+	bs := info.ToBytes(true)
+	return bs, nil
+}
+
 // PrivKeyForAddress looks up the associated private key for a P2PKH or P2PK
 // address.
 func (w *Wallet) PrivKeyForAddress(a btcutil.Address) (*btcec.PrivateKey, error) {

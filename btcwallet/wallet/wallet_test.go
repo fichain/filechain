@@ -5,6 +5,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/filechain/filechain/blockchain"
+	"github.com/filechain/filechain/btcwallet/waddrmgr"
 	"github.com/filechain/filechain/btcwallet/walletdb"
 	"github.com/filechain/filechain/btcwallet/wtxmgr"
 
@@ -201,5 +203,25 @@ func TestLabelTransaction(t *testing.T) {
 					test.expectedErr, err)
 			}
 		})
+	}
+}
+
+func TestProofAndValidate(t *testing.T) {
+	w, cleanup := testWallet(t)
+	defer cleanup()
+	addr, err := w.CurrentAddress(0, waddrmgr.KeyScopeBIP0084)
+	if err != nil {
+		t.Fatalf("unable to get current address: %v", addr)
+	}
+
+	buyhash, _ := hex.DecodeString("1234567890123456789012345678901234567890")
+	proof, err := w.GetProof(&addr, buyhash, addr.EncodeAddress(), 1)
+	if err != nil {
+		t.Fatalf("无法获取到购买证明 %s", err.Error())
+	}
+
+	err = blockchain.ValidateProof(proof, &addr, buyhash, addr.EncodeAddress(), 1)
+	if err != nil {
+		t.Fatalf("无法验证证明 %s", err.Error())
 	}
 }
