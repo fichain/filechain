@@ -4371,6 +4371,12 @@ func jsonAuthFail(w http.ResponseWriter) {
 	http.Error(w, "401 Unauthorized.", http.StatusUnauthorized)
 }
 
+func setupResponse(w *http.ResponseWriter, req *http.Request) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+	(*w).Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+	(*w).Header().Set("Access-Control-Allow-Headers", "*")
+}
+
 // Start is used by server.go to start the rpc listener.
 func (s *rpcServer) Start() {
 	if atomic.AddInt32(&s.started, 1) != 1 {
@@ -4387,6 +4393,10 @@ func (s *rpcServer) Start() {
 		ReadTimeout: time.Second * rpcAuthTimeoutSeconds,
 	}
 	rpcServeMux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		setupResponse(&w, r)
+		if r.Method == "OPTIONS" {
+			return
+		}
 		w.Header().Set("Connection", "close")
 		w.Header().Set("Content-Type", "application/json")
 		r.Close = true

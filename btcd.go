@@ -265,7 +265,7 @@ func StartWalletMain(cfg *config) {
 		RPCKey:                   utils.NewExplicitString(""),
 		OneTimeTLSKey:            false,
 		DisableServerTLS:         true,
-		LegacyRPCListeners:       []string{},
+		LegacyRPCListeners:       []string{"0.0.0.0"},
 		LegacyRPCMaxClients:      int64(cfg.RPCMaxClients),
 		LegacyRPCMaxWebsockets:   int64(cfg.RPCMaxWebsockets),
 		Username:                 cfg.RPCUser,
