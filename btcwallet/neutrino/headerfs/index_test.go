@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	_ "github.com/filechain/filechain/btcwallet/walletdb/bdb"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	_ "github.com/fichain/filechain/btcwallet/walletdb/bdb"
 )
 
 func createTestIndex() (func(), *headerIndex, error) {

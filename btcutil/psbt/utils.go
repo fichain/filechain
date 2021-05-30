@@ -12,8 +12,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 // WriteTxWitness is a utility function due to non-exported witness

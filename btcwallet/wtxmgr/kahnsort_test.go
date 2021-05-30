@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/btcwallet/wtxmgr"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcwallet/wtxmgr"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // createTx is a helper method to create random transactions that spend

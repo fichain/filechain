@@ -17,7 +17,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/filechain/filechain/btcec"
+	"github.com/fichain/filechain/btcec"
 )
 
 func main() {

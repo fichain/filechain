@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/btcsuite/btclog"
-	"github.com/filechain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil"
 )
 
 // blockProgressLogger provides periodic logging for other services in order

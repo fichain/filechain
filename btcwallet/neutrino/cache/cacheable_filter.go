@@ -1,9 +1,9 @@
 package cache
 
 import (
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcwallet/neutrino/filterdb"
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcwallet/neutrino/filterdb"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 // FilterCacheKey represents the key used to access filters in the FilterCache.

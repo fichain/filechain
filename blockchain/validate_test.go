@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestSequenceLocksActive tests the SequenceLockActive function to ensure it

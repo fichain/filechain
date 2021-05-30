@@ -5,11 +5,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/txscript"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/txscript"
 	"github.com/stretchr/testify/require"
 )
 

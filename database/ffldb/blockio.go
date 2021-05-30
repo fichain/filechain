@@ -17,9 +17,9 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/wire"
 )
 
 const (

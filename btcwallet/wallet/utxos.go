@@ -9,12 +9,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcutil/psbt"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcutil/psbt"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 var (

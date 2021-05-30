@@ -7,15 +7,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcutil/gcs/builder"
-	"github.com/filechain/filechain/btcwallet/neutrino/cache"
-	"github.com/filechain/filechain/btcwallet/neutrino/filterdb"
-	"github.com/filechain/filechain/btcwallet/neutrino/pushtx"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcutil/gcs/builder"
+	"github.com/fichain/filechain/btcwallet/neutrino/cache"
+	"github.com/fichain/filechain/btcwallet/neutrino/filterdb"
+	"github.com/fichain/filechain/btcwallet/neutrino/pushtx"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 var (

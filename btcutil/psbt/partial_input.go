@@ -6,8 +6,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 // PInput is a struct encapsulating all the data that can be attached to any

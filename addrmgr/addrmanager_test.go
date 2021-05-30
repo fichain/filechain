@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/addrmgr"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/addrmgr"
+	"github.com/fichain/filechain/wire"
 )
 
 // naTest is used to describe a test to be performed against the NetAddressKey

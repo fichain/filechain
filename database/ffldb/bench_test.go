@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/database"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/database"
 )
 
 // BenchmarkBlockHeader benchmarks how long it takes to load the mainnet genesis

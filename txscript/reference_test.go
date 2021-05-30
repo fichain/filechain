@@ -15,9 +15,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // scriptTestName returns a descriptive test name for the given reference script

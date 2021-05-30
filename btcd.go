@@ -22,11 +22,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/filechain/filechain/blockchain/indexers"
-	utils "github.com/filechain/filechain/btcwallet/maindep"
-	"github.com/filechain/filechain/btcwallet/wallet"
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/limits"
+	"github.com/fichain/filechain/blockchain/indexers"
+	utils "github.com/fichain/filechain/btcwallet/maindep"
+	"github.com/fichain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/limits"
 )
 
 //go:embed static

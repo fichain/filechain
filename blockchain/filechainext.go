@@ -5,14 +5,14 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/btcjson"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/wallet/txrules"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/btcjson"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/wallet/txrules"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 const CommunityAddr = "STzkcq92qQigxd5qEeZrTkd4s3MRdRjxMr"

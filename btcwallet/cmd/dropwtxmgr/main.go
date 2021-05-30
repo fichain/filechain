@@ -11,10 +11,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/wallet"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	_ "github.com/filechain/filechain/btcwallet/walletdb/bdb"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	_ "github.com/fichain/filechain/btcwallet/walletdb/bdb"
 	"github.com/jessevdk/go-flags"
 )
 

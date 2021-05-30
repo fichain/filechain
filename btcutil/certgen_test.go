@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil"
 	//"github.com/davecgh/go-spew/spew"
 )
 

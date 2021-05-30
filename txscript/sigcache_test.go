@@ -8,8 +8,8 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 // genRandomSig returns a random message, a signature of the message under the

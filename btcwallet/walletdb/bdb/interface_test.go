@@ -18,7 +18,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/filechain/filechain/btcwallet/walletdb/walletdbtest"
+	"github.com/fichain/filechain/btcwallet/walletdb/walletdbtest"
 )
 
 // TestInterface performs all interfaces tests for this database driver.

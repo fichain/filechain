@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/database"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/database"
 )
 
 // blockRegionCmd defines the configuration options for the fetchblockregion

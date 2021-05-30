@@ -4,13 +4,13 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcwallet/neutrino/cache"
-	"github.com/filechain/filechain/btcwallet/neutrino/cache/lru"
-	"github.com/filechain/filechain/btcwallet/neutrino/filterdb"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcwallet/neutrino/cache"
+	"github.com/fichain/filechain/btcwallet/neutrino/cache/lru"
+	"github.com/fichain/filechain/btcwallet/neutrino/filterdb"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestBlockFilterCaches tests that we can put and retrieve elements from all

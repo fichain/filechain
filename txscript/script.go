@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // Bip16Activation is the timestamp where BIP0016 is valid to use in the

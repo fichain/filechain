@@ -12,8 +12,8 @@ package psbt
 import (
 	"bytes"
 
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 // Extract takes a finalized psbt.Packet and outputs a finalized transaction

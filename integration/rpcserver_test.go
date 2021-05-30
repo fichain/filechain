@@ -14,10 +14,10 @@ import (
 	"runtime/debug"
 	"testing"
 
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/integration/rpctest"
-	"github.com/filechain/filechain/rpcclient"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/integration/rpctest"
+	"github.com/fichain/filechain/rpcclient"
 )
 
 func testGetBestBlock(r *rpctest.Harness, t *testing.T) {

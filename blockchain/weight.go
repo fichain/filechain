@@ -7,9 +7,9 @@ package blockchain
 import (
 	"fmt"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 const (

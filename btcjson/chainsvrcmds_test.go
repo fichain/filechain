@@ -12,8 +12,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/btcjson"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcjson"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestChainSvrCmds tests all of the chain server commands marshal and unmarshal

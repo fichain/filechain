@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 // defaultDBTimeout specifies the timeout value when opening the wallet

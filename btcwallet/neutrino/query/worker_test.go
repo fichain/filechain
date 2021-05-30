@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 var (

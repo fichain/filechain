@@ -7,7 +7,7 @@ package zero_test
 import (
 	"testing"
 
-	. "github.com/filechain/filechain/btcwallet/internal/zero"
+	. "github.com/fichain/filechain/btcwallet/internal/zero"
 )
 
 var (

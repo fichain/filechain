@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // randAddr generates a *wire.NetAddress backed by a random IPv4/IPv6 address.

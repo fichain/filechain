@@ -11,13 +11,13 @@ import (
 	"path/filepath"
 
 	"github.com/btcsuite/btclog"
-	"github.com/filechain/filechain/btcwallet/chain"
-	"github.com/filechain/filechain/btcwallet/neutrino"
-	"github.com/filechain/filechain/btcwallet/rpc/legacyrpc"
-	"github.com/filechain/filechain/btcwallet/rpc/rpcserver"
-	"github.com/filechain/filechain/btcwallet/wallet"
-	"github.com/filechain/filechain/btcwallet/wtxmgr"
-	"github.com/filechain/filechain/rpcclient"
+	"github.com/fichain/filechain/btcwallet/chain"
+	"github.com/fichain/filechain/btcwallet/neutrino"
+	"github.com/fichain/filechain/btcwallet/rpc/legacyrpc"
+	"github.com/fichain/filechain/btcwallet/rpc/rpcserver"
+	"github.com/fichain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/btcwallet/wtxmgr"
+	"github.com/fichain/filechain/rpcclient"
 	"github.com/jrick/logrotate/rotator"
 )
 

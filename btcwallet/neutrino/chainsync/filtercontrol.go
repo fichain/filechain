@@ -3,9 +3,9 @@ package chainsync
 import (
 	"fmt"
 
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // ErrCheckpointMismatch is returned if given filter headers don't pass our

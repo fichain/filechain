@@ -12,10 +12,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/internal/prompt"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/btcwallet/internal/prompt"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 const (

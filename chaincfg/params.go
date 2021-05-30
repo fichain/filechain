@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // These variables are the chain proof-of-work limit parameters for each default

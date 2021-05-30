@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/filechain/filechain/btcwallet/neutrino/blockntfns"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcwallet/neutrino/blockntfns"
+	"github.com/fichain/filechain/wire"
 )
 
 // createTx is a helper method to create random transactions that spend

@@ -8,15 +8,15 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/psbt"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/wallet/txauthor"
-	"github.com/filechain/filechain/btcwallet/wallet/txrules"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/btcwallet/wtxmgr"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/psbt"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/wallet/txauthor"
+	"github.com/fichain/filechain/btcwallet/wallet/txrules"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/wtxmgr"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 // FundPsbt creates a fully populated PSBT packet that contains enough inputs to

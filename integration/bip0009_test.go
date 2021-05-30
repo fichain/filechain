@@ -13,10 +13,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/integration/rpctest"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/integration/rpctest"
 )
 
 const (

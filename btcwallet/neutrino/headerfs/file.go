@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // ErrHeaderNotFound is returned when a target header on disk (flat file) can't

@@ -9,7 +9,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/filechain/filechain/btcjson"
+	"github.com/fichain/filechain/btcjson"
 )
 
 // TestUsageFlagStringer tests the stringized output for the UsageFlag type.

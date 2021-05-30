@@ -3,10 +3,10 @@ package neutrino
 import (
 	"fmt"
 
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/btcwallet/neutrino/headerfs"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/btcwallet/neutrino/headerfs"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // mockBlockHeaderStore is an implementation of the BlockHeaderStore backed by

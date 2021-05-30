@@ -11,10 +11,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/database/ffldb"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/database/ffldb"
 )
 
 // dbType is the database type name for this driver.

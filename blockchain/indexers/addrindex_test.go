@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // addrIndexBucket provides a mock address index database bucket by implementing

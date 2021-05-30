@@ -8,8 +8,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/filechain/filechain/addrmgr"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/addrmgr"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestIPTypes ensures the various functions which determine the type of an IP

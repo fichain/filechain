@@ -5,8 +5,8 @@
 package main
 
 import (
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/wire"
 )
 
 // activeNetParams is a pointer to the parameters specific to the

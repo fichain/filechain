@@ -13,7 +13,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 // genesisCoinbaseTx is the coinbase transaction for the genesis blocks for

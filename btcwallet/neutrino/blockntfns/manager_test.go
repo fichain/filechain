@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/neutrino/blockntfns"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcwallet/neutrino/blockntfns"
+	"github.com/fichain/filechain/wire"
 )
 
 var emptyHeader wire.BlockHeader

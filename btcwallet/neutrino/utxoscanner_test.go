@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcwallet/neutrino/headerfs"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcwallet/neutrino/headerfs"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 type MockChainClient struct {

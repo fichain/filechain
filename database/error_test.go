@@ -8,7 +8,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/filechain/filechain/database"
+	"github.com/fichain/filechain/database"
 )
 
 // TestErrorCodeStringer tests the stringized output for the ErrorCode type.

@@ -16,9 +16,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/mining"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/mining"
 )
 
 // TODO incorporate Alex Morcos' modifications to Gavin's initial model

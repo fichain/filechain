@@ -1,8 +1,8 @@
 package neutrino
 
 import (
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // batchSpendReporter orchestrates the delivery of spend reports to

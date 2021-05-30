@@ -16,13 +16,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/internal/cfgutil"
-	"github.com/filechain/filechain/btcwallet/internal/legacy/keystore"
-	"github.com/filechain/filechain/btcwallet/netparams"
-	"github.com/filechain/filechain/btcwallet/neutrino"
-	"github.com/filechain/filechain/btcwallet/wallet"
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/internal/cfgutil"
+	"github.com/fichain/filechain/btcwallet/internal/legacy/keystore"
+	"github.com/fichain/filechain/btcwallet/netparams"
+	"github.com/fichain/filechain/btcwallet/neutrino"
+	"github.com/fichain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/chaincfg"
 	flags "github.com/jessevdk/go-flags"
 )
 

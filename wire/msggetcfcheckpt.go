@@ -7,7 +7,7 @@ package wire
 import (
 	"io"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 // MsgGetCFCheckpt is a request for filter headers at evenly spaced intervals

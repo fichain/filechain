@@ -7,7 +7,7 @@ package blockchain
 import (
 	"testing"
 
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 // TestNotifications ensures that notification callbacks are fired on events.

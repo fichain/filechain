@@ -10,9 +10,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/peer"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/peer"
+	"github.com/fichain/filechain/wire"
 )
 
 // mockRemotePeer creates a basic inbound peer listening on the simnet port for

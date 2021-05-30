@@ -5,8 +5,8 @@
 package blockchain
 
 import (
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/txscript"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/txscript"
 )
 
 // -----------------------------------------------------------------------------

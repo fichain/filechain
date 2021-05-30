@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // BroadcastErrorCode uniquely identifies the broadcast error.

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/filechain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/walletdb"
 )
 
 // applyMigration is a helper function that allows us to assert the state of the

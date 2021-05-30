@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/btcjson"
+	"github.com/fichain/filechain/btcjson"
 )
 
 // TestAssignField tests the assignField function handles supported combinations

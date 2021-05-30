@@ -4,13 +4,13 @@ import (
 	"crypto/sha256"
 	"testing"
 
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcutil/gcs/builder"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcutil/gcs/builder"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 	"github.com/stretchr/testify/require"
 )
 

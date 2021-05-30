@@ -5,8 +5,8 @@
 package txsizes
 
 import (
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/wire"
 )
 
 // Worst case script and input/output size estimates.

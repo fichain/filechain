@@ -7,14 +7,14 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcutil/gcs/builder"
-	"github.com/filechain/filechain/btcwallet/neutrino/headerfs"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcutil/gcs/builder"
+	"github.com/fichain/filechain/btcwallet/neutrino/headerfs"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 func decodeHashNoError(str string) *chainhash.Hash {

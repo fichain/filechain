@@ -7,7 +7,7 @@ package addrmgr
 import (
 	"time"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // KnownAddress tracks information about a known network address that is used

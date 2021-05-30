@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/filechain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/btcwallet/wallet"
 )
 
 // Harness holds the BranchRecoveryState being tested, the recovery window being

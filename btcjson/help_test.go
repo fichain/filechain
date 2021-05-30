@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/btcjson"
+	"github.com/fichain/filechain/btcjson"
 )
 
 // TestHelpReflectInternals ensures the various help functions which deal with

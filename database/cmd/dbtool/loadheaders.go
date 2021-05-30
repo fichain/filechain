@@ -7,8 +7,8 @@ package main
 import (
 	"time"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/database"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/database"
 )
 
 // headersCmd defines the configuration options for the loadheaders command.

@@ -10,11 +10,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/database"
-	_ "github.com/filechain/filechain/database/ffldb"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/database"
+	_ "github.com/fichain/filechain/database/ffldb"
+	"github.com/fichain/filechain/wire"
 )
 
 // This example demonstrates creating a new database.
@@ -22,8 +22,8 @@ func ExampleCreate() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/filechain/filechain/database"
-	// 	_ "github.com/filechain/filechain/database/ffldb"
+	// 	"github.com/fichain/filechain/database"
+	// 	_ "github.com/fichain/filechain/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -48,8 +48,8 @@ func Example_basicUsage() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/filechain/filechain/database"
-	// 	_ "github.com/filechain/filechain/database/ffldb"
+	// 	"github.com/fichain/filechain/database"
+	// 	_ "github.com/fichain/filechain/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -114,8 +114,8 @@ func Example_blockStorageAndRetrieval() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/filechain/filechain/database"
-	// 	_ "github.com/filechain/filechain/database/ffldb"
+	// 	"github.com/fichain/filechain/database"
+	// 	_ "github.com/fichain/filechain/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.

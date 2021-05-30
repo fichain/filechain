@@ -12,17 +12,17 @@ import (
 
 	"golang.org/x/crypto/ssh/terminal"
 
-	"github.com/filechain/filechain/btcjson"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/internal/cfgutil"
-	"github.com/filechain/filechain/btcwallet/netparams"
-	"github.com/filechain/filechain/btcwallet/wallet/txauthor"
-	"github.com/filechain/filechain/btcwallet/wallet/txrules"
-	"github.com/filechain/filechain/btcwallet/wallet/txsizes"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/rpcclient"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcjson"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/internal/cfgutil"
+	"github.com/fichain/filechain/btcwallet/netparams"
+	"github.com/fichain/filechain/btcwallet/wallet/txauthor"
+	"github.com/fichain/filechain/btcwallet/wallet/txrules"
+	"github.com/fichain/filechain/btcwallet/wallet/txsizes"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/rpcclient"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 	"github.com/jessevdk/go-flags"
 )
 

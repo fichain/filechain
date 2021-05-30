@@ -16,22 +16,22 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/btcjson"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcwallet/chain"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/wallet/txauthor"
-	"github.com/filechain/filechain/btcwallet/wallet/txrules"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/btcwallet/walletdb/migration"
-	"github.com/filechain/filechain/btcwallet/wtxmgr"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/btcjson"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcwallet/chain"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/wallet/txauthor"
+	"github.com/fichain/filechain/btcwallet/wallet/txrules"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/walletdb/migration"
+	"github.com/fichain/filechain/btcwallet/wtxmgr"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 const (
@@ -3652,7 +3652,7 @@ func (w *Wallet) publishTransaction(tx *wire.MsgTx) (*chainhash.Hash, error) {
 	//
 	// This error is returned when broadcasting/sending a transaction to a
 	// btcd node that already has it in their mempool.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L953
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L953
 	case match(err, "already have transaction"):
 		fallthrough
 
@@ -3669,14 +3669,14 @@ func (w *Wallet) publishTransaction(tx *wire.MsgTx) (*chainhash.Hash, error) {
 	//
 	// This error is returned when sending a transaction that has already
 	// confirmed to a btcd/bitcoind node over RPC.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/rpcserver.go#L3355
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/rpcserver.go#L3355
 	// https://github.com/bitcoin/bitcoin/blob/9bf5768dd628b3a7c30dd42b5ed477a92c4d3540/src/node/transaction.cpp#L36
 	case rpcTxConfirmed:
 		fallthrough
 
 	// This error is returned when broadcasting a transaction that has
 	// already confirmed to a btcd node over the P2P network.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L1036
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L1036
 	case match(err, "transaction already exists"):
 		fallthrough
 
@@ -3706,20 +3706,20 @@ func (w *Wallet) publishTransaction(tx *wire.MsgTx) (*chainhash.Hash, error) {
 	// This error is returned from btcd when there is already a transaction
 	// not signaling replacement in the mempool that spends one of the
 	// referenced outputs.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L591
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L591
 	case match(err, "already spent"):
 		fallthrough
 
 	// This error is returned from btcd when a referenced output cannot be
 	// found, meaning it etiher has been spent or doesn't exist.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/blockchain/chain.go#L405
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/blockchain/chain.go#L405
 	case match(err, "already been spent"):
 		fallthrough
 
 	// This error is returned from btcd when a transaction is spending
 	// either output that is missing or already spent, and orphans aren't
 	// allowed.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L1409
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L1409
 	case match(err, "orphan transaction"):
 		fallthrough
 
@@ -3769,11 +3769,11 @@ func (w *Wallet) publishTransaction(tx *wire.MsgTx) (*chainhash.Hash, error) {
 
 	// Returned by btcd when replacement transaction was rejected for
 	// whatever reason.
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L841
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L854
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L875
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L896
-	// https://github.com/filechain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L913
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L841
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L854
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L875
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L896
+	// https://github.com/fichain/filechain/blob/130ea5bddde33df32b06a1cdb42a6316eb73cff5/mempool/mempool.go#L913
 	case match(err, "replacement transaction"):
 		returnErr = &ErrReplacement{
 			backendError: err,

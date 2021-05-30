@@ -7,8 +7,8 @@ package chaincfg
 import (
 	"time"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // genesisCoinbaseTx is the coinbase transaction for the genesis blocks for

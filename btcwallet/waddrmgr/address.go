@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcwallet/internal/zero"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/txscript"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcwallet/internal/zero"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/txscript"
 )
 
 // AddressType represents the various address types waddrmgr is currently able

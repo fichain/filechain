@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/btcsuite/btclog"
-	"github.com/filechain/filechain/database"
+	"github.com/fichain/filechain/database"
 	flags "github.com/jessevdk/go-flags"
 )
 

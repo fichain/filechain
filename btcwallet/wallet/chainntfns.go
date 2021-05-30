@@ -9,13 +9,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/chain"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/btcwallet/wtxmgr"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcwallet/chain"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/wtxmgr"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 const (

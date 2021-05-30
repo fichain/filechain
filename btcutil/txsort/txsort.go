@@ -11,8 +11,8 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 // InPlaceSort modifies the passed transaction inputs and outputs to be sorted

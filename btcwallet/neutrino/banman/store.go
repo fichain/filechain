@@ -8,7 +8,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/walletdb"
 )
 
 var (

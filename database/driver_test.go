@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/filechain/filechain/database"
-	_ "github.com/filechain/filechain/database/ffldb"
+	"github.com/fichain/filechain/database"
+	_ "github.com/fichain/filechain/database/ffldb"
 )
 
 var (

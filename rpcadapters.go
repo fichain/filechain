@@ -7,13 +7,13 @@ package main
 import (
 	"sync/atomic"
 
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/mempool"
-	"github.com/filechain/filechain/netsync"
-	"github.com/filechain/filechain/peer"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/mempool"
+	"github.com/fichain/filechain/netsync"
+	"github.com/fichain/filechain/peer"
+	"github.com/fichain/filechain/wire"
 )
 
 // rpcPeer provides a peer for use with the RPC server and implements the

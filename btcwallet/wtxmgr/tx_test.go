@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	_ "github.com/filechain/filechain/btcwallet/walletdb/bdb"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	_ "github.com/fichain/filechain/btcwallet/walletdb/bdb"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 	"github.com/lightningnetwork/lnd/clock"
 )
 

@@ -5,8 +5,8 @@
 package mempool
 
 import (
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/wire"
 )
 
 // RuleError identifies a rule violation.  It is used to indicate that

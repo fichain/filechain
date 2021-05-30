@@ -5,9 +5,9 @@
 package mining
 
 import (
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/wire"
 )
 
 const (

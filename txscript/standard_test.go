@@ -11,9 +11,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/wire"
 )
 
 // mustParseShortForm parses the passed short form script and returns the

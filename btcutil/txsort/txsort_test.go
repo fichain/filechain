@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/filechain/filechain/btcutil/txsort"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil/txsort"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestSort ensures the transaction sorting works according to the BIP.

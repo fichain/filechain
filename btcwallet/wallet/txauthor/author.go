@@ -9,12 +9,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/wallet/txrules"
-	"github.com/filechain/filechain/btcwallet/wallet/txsizes"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/wallet/txrules"
+	"github.com/fichain/filechain/btcwallet/wallet/txsizes"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 // SumOutputValues sums up the list of TxOuts and returns an Amount.

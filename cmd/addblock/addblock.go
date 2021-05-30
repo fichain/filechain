@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 
 	"github.com/btcsuite/btclog"
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/blockchain/indexers"
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/limits"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/blockchain/indexers"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/limits"
 )
 
 const (

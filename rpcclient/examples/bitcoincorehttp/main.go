@@ -7,7 +7,7 @@ package main
 import (
 	"log"
 
-	"github.com/filechain/filechain/rpcclient"
+	"github.com/fichain/filechain/rpcclient"
 )
 
 func main() {

@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // testNoncePrng provides a deterministic prng for the nonce in generated fake

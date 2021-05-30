@@ -10,15 +10,15 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/gcs"
-	"github.com/filechain/filechain/btcutil/gcs/builder"
-	"github.com/filechain/filechain/btcwallet/neutrino/blockntfns"
-	"github.com/filechain/filechain/btcwallet/neutrino/headerfs"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/rpcclient"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/gcs"
+	"github.com/fichain/filechain/btcutil/gcs/builder"
+	"github.com/fichain/filechain/btcwallet/neutrino/blockntfns"
+	"github.com/fichain/filechain/btcwallet/neutrino/headerfs"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/rpcclient"
+	"github.com/fichain/filechain/wire"
 )
 
 // mockChainSource is a mock implementation of the ChainSource interface that

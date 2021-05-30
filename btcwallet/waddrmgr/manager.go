@@ -11,12 +11,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcwallet/internal/zero"
-	"github.com/filechain/filechain/btcwallet/snacl"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcwallet/internal/zero"
+	"github.com/fichain/filechain/btcwallet/snacl"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 const (

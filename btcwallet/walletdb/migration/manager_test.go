@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/btcwallet/walletdb/migration"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/walletdb/migration"
 )
 
 type mockMigrationManager struct {

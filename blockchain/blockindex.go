@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/wire"
 )
 
 // blockStatus is a bit field representing the validation state of the block.

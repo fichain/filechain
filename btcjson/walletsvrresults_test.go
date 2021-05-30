@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/filechain/filechain/txscript"
+	"github.com/fichain/filechain/txscript"
 )
 
 // TestGetAddressInfoResult ensures that custom unmarshalling of

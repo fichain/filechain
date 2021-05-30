@@ -9,9 +9,9 @@ package neutrino
 import (
 	"errors"
 
-	"github.com/filechain/filechain/addrmgr"
-	"github.com/filechain/filechain/btcwallet/neutrino/query"
-	"github.com/filechain/filechain/connmgr"
+	"github.com/fichain/filechain/addrmgr"
+	"github.com/fichain/filechain/btcwallet/neutrino/query"
+	"github.com/fichain/filechain/connmgr"
 )
 
 type getConnCountMsg struct {

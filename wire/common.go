@@ -12,7 +12,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 const (

@@ -11,8 +11,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/database"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/database"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestErrNotInMainChain ensures the functions related to errNotInMainChain work

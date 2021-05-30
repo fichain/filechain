@@ -5,7 +5,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // POutput is a struct encapsulating all the data that can be attached

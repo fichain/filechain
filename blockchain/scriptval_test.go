@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/filechain/filechain/txscript"
+	"github.com/fichain/filechain/txscript"
 )
 
 // TestCheckBlockScripts ensures that validating the all of the scripts in a

@@ -3,7 +3,7 @@ package query
 import (
 	"time"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 const (

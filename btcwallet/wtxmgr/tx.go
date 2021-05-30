@@ -12,12 +12,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/filechain/filechain/blockchain"
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/blockchain"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 	"github.com/lightningnetwork/lnd/clock"
 )
 

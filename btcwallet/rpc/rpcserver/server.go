@@ -8,11 +8,11 @@
 // Full documentation of the API implemented by this package is maintained in a
 // language-agnostic document:
 //
-//   https://github.com/filechain/filechain/btcwallet/blob/master/rpc/documentation/api.md
+//   https://github.com/fichain/filechain/btcwallet/blob/master/rpc/documentation/api.md
 //
 // Any API changes must be performed according to the steps listed here:
 //
-//   https://github.com/filechain/filechain/btcwallet/blob/master/rpc/documentation/serverchanges.md
+//   https://github.com/fichain/filechain/btcwallet/blob/master/rpc/documentation/serverchanges.md
 package rpcserver
 
 import (
@@ -26,20 +26,20 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/filechain/filechain/btcutil"
-	"github.com/filechain/filechain/btcutil/hdkeychain"
-	"github.com/filechain/filechain/btcwallet/chain"
-	"github.com/filechain/filechain/btcwallet/internal/cfgutil"
-	"github.com/filechain/filechain/btcwallet/internal/zero"
-	"github.com/filechain/filechain/btcwallet/netparams"
-	pb "github.com/filechain/filechain/btcwallet/rpc/walletrpc"
-	"github.com/filechain/filechain/btcwallet/waddrmgr"
-	"github.com/filechain/filechain/btcwallet/wallet"
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/rpcclient"
-	"github.com/filechain/filechain/txscript"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcutil"
+	"github.com/fichain/filechain/btcutil/hdkeychain"
+	"github.com/fichain/filechain/btcwallet/chain"
+	"github.com/fichain/filechain/btcwallet/internal/cfgutil"
+	"github.com/fichain/filechain/btcwallet/internal/zero"
+	"github.com/fichain/filechain/btcwallet/netparams"
+	pb "github.com/fichain/filechain/btcwallet/rpc/walletrpc"
+	"github.com/fichain/filechain/btcwallet/waddrmgr"
+	"github.com/fichain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/rpcclient"
+	"github.com/fichain/filechain/txscript"
+	"github.com/fichain/filechain/wire"
 )
 
 // Public API version constants

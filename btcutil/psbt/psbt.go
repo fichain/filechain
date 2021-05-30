@@ -14,7 +14,7 @@ import (
 
 	"io"
 
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // psbtMagicLength is the length of the magic bytes used to signal the start of

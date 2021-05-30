@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/wire"
 )
 
 func TestInPlaceSort(t *testing.T) {

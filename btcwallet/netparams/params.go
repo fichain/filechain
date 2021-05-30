@@ -5,8 +5,8 @@
 package netparams
 
 import (
-	"github.com/filechain/filechain/chaincfg"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/chaincfg"
+	"github.com/fichain/filechain/wire"
 )
 
 // Params is used to group parameters for various networks such as the main

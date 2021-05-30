@@ -9,7 +9,7 @@ import (
 	"os"
 	"runtime"
 
-	utils "github.com/filechain/filechain/btcwallet/maindep"
+	utils "github.com/fichain/filechain/btcwallet/maindep"
 )
 
 func main() {

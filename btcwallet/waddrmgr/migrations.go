@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/btcwallet/walletdb/migration"
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/walletdb/migration"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 // versions is a list of the different database versions. The last entry should

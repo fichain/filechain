@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"hash/crc32"
 
-	"github.com/filechain/filechain/database"
+	"github.com/fichain/filechain/database"
 )
 
 // The serialized write cursor location format is:

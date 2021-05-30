@@ -7,8 +7,8 @@ package waddrmgr
 import (
 	"time"
 
-	"github.com/filechain/filechain/btcwallet/walletdb"
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 // BlockStamp defines a block (by height and a unique hash) and is used to mark

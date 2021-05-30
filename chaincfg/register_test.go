@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	. "github.com/filechain/filechain/chaincfg"
+	. "github.com/fichain/filechain/chaincfg"
 )
 
 // Define some of the required parameters for a user-registered

@@ -4,6 +4,6 @@
 
 package utils
 
-import "github.com/filechain/filechain/btcwallet/netparams"
+import "github.com/fichain/filechain/btcwallet/netparams"
 
 var activeNet = &netparams.MainNetParams

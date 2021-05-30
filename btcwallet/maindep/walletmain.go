@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/filechain/filechain/btcwallet/chain"
-	"github.com/filechain/filechain/btcwallet/neutrino"
-	"github.com/filechain/filechain/btcwallet/rpc/legacyrpc"
-	"github.com/filechain/filechain/btcwallet/wallet"
-	"github.com/filechain/filechain/btcwallet/walletdb"
+	"github.com/fichain/filechain/btcwallet/chain"
+	"github.com/fichain/filechain/btcwallet/neutrino"
+	"github.com/fichain/filechain/btcwallet/rpc/legacyrpc"
+	"github.com/fichain/filechain/btcwallet/wallet"
+	"github.com/fichain/filechain/btcwallet/walletdb"
 )
 
 // WalletMain is a work-around main function that is required since deferred

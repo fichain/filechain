@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/filechain/filechain/btcec"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcec"
+	"github.com/fichain/filechain/wire"
 )
 
 // ScriptFlags is a bitmask defining additional operations or tests that will be

@@ -3,8 +3,8 @@ package pushtx_test
 import (
 	"testing"
 
-	"github.com/filechain/filechain/btcwallet/neutrino/pushtx"
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/btcwallet/neutrino/pushtx"
+	"github.com/fichain/filechain/wire"
 )
 
 // TestParseBroadcastErrorCode ensures that we properly construct a

@@ -7,7 +7,7 @@ package blockchain
 import (
 	"math"
 
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 const (

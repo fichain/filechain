@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/filechain/filechain/btcjson"
+	"github.com/fichain/filechain/btcjson"
 )
 
 // helpDescsEnUS defines the English descriptions used for the help strings.

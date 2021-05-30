@@ -1,4 +1,4 @@
-module github.com/filechain/filechain
+module github.com/fichain/filechain
 
 require (
 	github.com/aead/siphash v1.0.1

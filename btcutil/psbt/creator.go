@@ -5,7 +5,7 @@
 package psbt
 
 import (
-	"github.com/filechain/filechain/wire"
+	"github.com/fichain/filechain/wire"
 )
 
 // MinTxVersion is the lowest transaction version that we'll permit.

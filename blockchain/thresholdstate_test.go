@@ -7,7 +7,7 @@ package blockchain
 import (
 	"testing"
 
-	"github.com/filechain/filechain/chaincfg/chainhash"
+	"github.com/fichain/filechain/chaincfg/chainhash"
 )
 
 // TestThresholdStateStringer tests the stringized output for the

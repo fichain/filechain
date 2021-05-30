@@ -17,7 +17,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/filechain/filechain/chaincfg"
+	"github.com/fichain/filechain/chaincfg"
 )
 
 // TestBIP0032Vectors tests the vectors provided by [BIP32] to ensure the
