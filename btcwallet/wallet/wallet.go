@@ -32,6 +32,8 @@ import (
 	"github.com/fichain/filechain/chaincfg/chainhash"
 	"github.com/fichain/filechain/txscript"
 	"github.com/fichain/filechain/wire"
+
+	fileSystem "github.com/fichain/go-file/filechain"
 )
 
 const (
@@ -129,6 +131,8 @@ type Wallet struct {
 	started bool
 	quit    chan struct{}
 	quitMu  sync.Mutex
+
+	Session *fileSystem.Session
 }
 
 // Start starts the goroutines necessary to manage a wallet.
@@ -3818,6 +3822,11 @@ func (w *Wallet) ChainParams() *chaincfg.Params {
 // with the wallet's database.
 func (w *Wallet) Database() walletdb.DB {
 	return w.db
+}
+
+func (w *Wallet) NewSession(cfg fileSystem.Config) (err error) {
+	w.Session, err = fileSystem.NewSession(cfg)
+	return
 }
 
 // CreateWithCallback is the same as Create with an added callback that will be

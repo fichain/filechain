@@ -42,6 +42,10 @@ type ListSingleHashCmd struct {
 	Hash string
 }
 
+type FilePathCmd struct {
+	Path string
+}
+
 type AppealTransInfo struct {
 	BuyHash  []byte
 	Transfer []byte

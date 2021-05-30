@@ -2,11 +2,13 @@ package utils
 
 import (
 	"fmt"
+	fileSystem "github.com/fichain/go-file/filechain"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"path/filepath"
 	"sync"
+	"time"
 
 	"github.com/fichain/filechain/btcwallet/chain"
 	"github.com/fichain/filechain/btcwallet/neutrino"
@@ -146,6 +148,24 @@ func WalletMain(cfg *Config) error {
 			<-legacyRPCServer.RequestProcessShutdown()
 			simulateInterrupt()
 		}()
+		cfg := fileSystem.DefaultConfig
+		cfg.Database = "~/filechain/session.db"
+		cfg.DataDir = "~/filechain/data"
+		cfg.PEXEnabled = false
+		cfg.RPCEnabled = false
+		cfg.DataDirIncludesTorrentID = false
+		cfg.LibP2pPort = 10000
+		cfg.LibP2pHandShake = time.Second * 10
+		cfg.LibP2pBootStrap = []string{"/ip4/49.232.15.82/tcp/4001/p2p/QmXbWBfj7LGMeZqktTi4qUk79cZRwoLCgNWyLeBmt8y2je"}
+		cfg.LipP2pRandSeed = 100
+		//todo
+		cfg.LibP2pUser = "default"
+		cfg.DHTBootstrapNodes = []string{}
+
+		err := legacyRPCServer.StartFileTorrentSystem(cfg)
+		if err != nil {
+			log.Errorf("start file system error!%v\n", err)
+		}
 	}
 
 	<-interruptHandlersDone

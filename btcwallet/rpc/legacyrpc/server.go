@@ -10,6 +10,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
+	fileSystem "github.com/fichain/go-file/filechain"
 	"io"
 	"io/ioutil"
 	"net"
@@ -661,4 +662,8 @@ func (s *Server) requestProcessShutdown() {
 // client requests remote shutdown.
 func (s *Server) RequestProcessShutdown() <-chan struct{} {
 	return s.requestShutdownChan
+}
+
+func (s *Server) StartFileTorrentSystem(cfg fileSystem.Config) error {
+	return s.wallet.NewSession(cfg)
 }

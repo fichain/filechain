@@ -14,6 +14,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	fileSystem "github.com/fichain/go-file/filechain"
+	"io/ioutil"
 	"sync"
 	"time"
 
@@ -141,6 +143,10 @@ var rpcHandlers = map[string]struct {
 	//file relatived methods
 	"getproof":        {handlerWithChain: getProof},
 	"publishhash":     {handler: publishHash},
+	"listfile":			{handler: listFileHandle},
+	"createHash":		{handler: createHashHandle},
+	"stats":			{handler: publishHash},
+
 	"buyhash":         {handlerWithChain: buyHash},
 	"confirmbuy":      {handlerWithChain: confirmBuy},
 	"listfilehash":    {handlerWithChain: listHash},
@@ -2119,6 +2125,14 @@ func confirmBuy(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient
 // 如果出现任何投诉，投诉者将得到单倍的传输押金，剩下的三倍将被罚没到社区地址
 func buyHash(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) (interface{}, error) {
 	cmd := icmd.(*btcjson.BuyHashCmd)
+
+	//todo
+	t, err := w.Session.AddFileId(`magnet:?xt=urn:btih:${cmd.hash}`, &fileSystem.AddTorrentOptions{StopAfterDownload: false, Stopped: false})
+	if err != nil {
+		log.Infof("download file error:%v\n", err)
+		return nil, err
+	}
+
 	hash, err := decodeHexStr(cmd.Hash)
 	if err != nil {
 		return nil, err
@@ -2188,12 +2202,15 @@ func buyHash(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) (
 	}
 	txHashStr := tx.TxHash().String()
 	log.Infof("Successfully sent transaction %v", txHashStr)
+
 	return &struct {
 		Tx      string // json:"tx"
 		BuyHash string // json:"hash"
+		Id 		string
 	}{
 		Tx:      txHashStr,
 		BuyHash: hex.EncodeToString(buyhash[:]),
+		Id: 	hex.EncodeToString(t.InfoHash()),
 	}, nil
 }
 
@@ -2460,4 +2477,56 @@ func listHash(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) 
 		cmd.Offset = &defaultOffset
 	}
 	return chainClient.ListHash(cmd)
+}
+
+type FileInfo struct {
+	Name 	string
+	Dir 	bool
+	Size 	int64
+}
+
+func listFileHandle(icmd interface{}, w *wallet.Wallet) (interface{}, error) {
+	cmd := icmd.(*btcjson.FilePathCmd)
+
+	rootPath := cmd.Path
+	if rootPath == "" {
+		rootPath = "/"
+	}
+
+	fileInfoList,err := ioutil.ReadDir(rootPath)
+	if err != nil {
+		log.Errorf("read root path error:%v\n", err)
+		return nil, err
+	}
+
+	var res []FileInfo
+	for _, file := range fileInfoList {
+		res = append(res, FileInfo{
+			Name: 	file.Name(),
+			Dir: 	file.IsDir(),
+			Size: 	file.Size(),
+		})
+	}
+	return res, nil
+}
+
+func createHashHandle(icmd interface{}, w *wallet.Wallet) (interface{}, error) {
+	cmd := icmd.(*btcjson.FilePathCmd)
+
+	rootPath := cmd.Path
+	if rootPath == "" {
+		return nil, errors.New("no path info")
+	}
+
+	t, err := w.Session.CreateFile(rootPath)
+	if err != nil {
+		log.Errorf("create file error:%v\n", err)
+	}
+	return struct {
+		Id 		string
+		Name 	string
+	}{
+		Id: 	hex.EncodeToString(t.InfoHash()),
+		Name: 	t.Name(),
+	}, nil
 }
