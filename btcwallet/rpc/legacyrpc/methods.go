@@ -2126,8 +2126,7 @@ func confirmBuy(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient
 func buyHash(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) (interface{}, error) {
 	cmd := icmd.(*btcjson.BuyHashCmd)
 
-	//todo
-	t, err := w.Session.AddFileId(`magnet:?xt=urn:btih:${cmd.hash}`, &fileSystem.AddTorrentOptions{StopAfterDownload: false, Stopped: false})
+	t, err := w.Session.AddFileId(fmt.Sprintf("magnet:?xt=urn:btih:%v", cmd.Hash), &fileSystem.AddTorrentOptions{StopAfterDownload: false, Stopped: false})
 	if err != nil {
 		log.Infof("download file error:%v\n", err)
 		return nil, err
