@@ -3825,6 +3825,10 @@ func (w *Wallet) Database() walletdb.DB {
 }
 
 func (w *Wallet) NewSession(cfg fileSystem.Config) (err error) {
+	if w.Session != nil {
+		log.Infof("wallet session exist, no need to create\n")
+		return nil
+	}
 	w.Session, err = fileSystem.NewSession(cfg)
 	return
 }

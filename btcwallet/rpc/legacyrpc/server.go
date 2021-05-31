@@ -307,6 +307,11 @@ func (s *Server) handlerClosure(request *btcjson.Request) lazyHandler {
 				return nil, jsonError(err)
 			}
 
+			err = s.StartFileTorrentSystem()
+			if err != nil {
+				return nil, jsonError(err)
+			}
+
 			return &btcjson.CreateWalletResult{
 				Name: cmdreq.WalletName,
 			}, nil
@@ -664,6 +669,25 @@ func (s *Server) RequestProcessShutdown() <-chan struct{} {
 	return s.requestShutdownChan
 }
 
-func (s *Server) StartFileTorrentSystem(cfg fileSystem.Config) error {
+func (s *Server) StartFileTorrentSystem() error {
+	if s.wallet == nil {
+		log.Infof("no wallet, wait to start torrent system\n")
+		return nil
+	}
+
+	cfg := fileSystem.DefaultConfig
+	cfg.Database = "~/filechain/session.db"
+	cfg.DataDir = "~/filechain/data"
+	cfg.PEXEnabled = false
+	cfg.RPCEnabled = false
+	cfg.DataDirIncludesTorrentID = false
+	cfg.LibP2pPort = 10000
+	cfg.LibP2pHandShake = time.Second * 10
+	cfg.LibP2pBootStrap = []string{"/ip4/49.232.15.82/tcp/4001/p2p/QmXbWBfj7LGMeZqktTi4qUk79cZRwoLCgNWyLeBmt8y2je"}
+	cfg.LipP2pRandSeed = 100
+	//todo
+	cfg.LibP2pUser = "default"
+	cfg.DHTBootstrapNodes = []string{}
+
 	return s.wallet.NewSession(cfg)
 }
