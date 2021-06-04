@@ -415,7 +415,7 @@ var TestNet3Params = Params{
 	Net:         wire.TestNet3,
 	DefaultPort: "18333",
 	DNSSeeds: []DNSSeed{
-		{"49.232.15.82", false},
+		{"129.146.28.181", false},
 	},
 
 	// Chain parameters

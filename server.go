@@ -31,6 +31,7 @@ import (
 	"github.com/fichain/filechain/chaincfg/chainhash"
 	"github.com/fichain/filechain/connmgr"
 	"github.com/fichain/filechain/database"
+	quic "github.com/fichain/filechain/fcquic"
 	"github.com/fichain/filechain/mempool"
 	"github.com/fichain/filechain/mining"
 	"github.com/fichain/filechain/mining/cpuminer"
@@ -2891,7 +2892,7 @@ func newServer(listenAddrs, agentBlacklist, agentWhitelist []string,
 		OnAccept:       s.inboundPeerConnected,
 		RetryDuration:  connectionRetryInterval,
 		TargetOutbound: uint32(targetOutbound),
-		Dial:           btcdDial,
+		Dial:           quic.Dial,
 		OnConnection:   s.outboundPeerConnected,
 		GetNewAddress:  newAddressFunc,
 	})
@@ -2971,7 +2972,7 @@ func initListeners(amgr *addrmgr.AddrManager, listenAddrs []string, services wir
 
 	listeners := make([]net.Listener, 0, len(netAddrs))
 	for _, addr := range netAddrs {
-		listener, err := net.Listen(addr.Network(), addr.String())
+		listener, err := quic.Listen(addr.String())
 		if err != nil {
 			srvrLog.Warnf("Can't listen on %s: %v", addr, err)
 			continue
