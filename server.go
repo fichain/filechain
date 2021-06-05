@@ -2964,15 +2964,20 @@ func newServer(listenAddrs, agentBlacklist, agentWhitelist []string,
 // addresses to the address manager. Returns the listeners and a NAT interface,
 // which is non-nil if UPnP is in use.
 func initListeners(amgr *addrmgr.AddrManager, listenAddrs []string, services wire.ServiceFlag) ([]net.Listener, NAT, error) {
-	// Listen for TCP connections at the configured addresses
-	netAddrs, err := parseListeners(listenAddrs)
-	if err != nil {
-		return nil, nil, err
+	// // Listen for TCP connections at the configured addresses
+	// netAddrs, err := parseListeners(listenAddrs)
+	// if err != nil {
+	// 	return nil, nil, err
+	// }
+
+	//修改为 quic 以后，每个node只开一个监听，所有的流量都通过一个地址发出
+	netAddrs := []string{
+		"0.0.0.0:18333",
 	}
 
 	listeners := make([]net.Listener, 0, len(netAddrs))
 	for _, addr := range netAddrs {
-		listener, err := quic.Listen(addr.String())
+		listener, err := quic.Listen(addr)
 		if err != nil {
 			srvrLog.Warnf("Can't listen on %s: %v", addr, err)
 			continue

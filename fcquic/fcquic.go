@@ -7,6 +7,7 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/pem"
+	"fmt"
 	"math/big"
 	"net"
 
@@ -37,8 +38,22 @@ func generateTLSConfig() *tls.Config {
 	}
 }
 
+var udpConn *net.UDPConn
+
 func Listen(addr string) (net.Listener, error) {
-	listener, err := quic.ListenAddr(addr, generateTLSConfig(), nil)
+	if udpConn != nil {
+		return nil, fmt.Errorf("修改为 QUIC 以后，只允许一个监听者")
+	}
+	udpAddr, err := net.ResolveUDPAddr("udp", addr)
+	if err != nil {
+		return nil, err
+	}
+	udpConn, err = net.ListenUDP("udp", udpAddr)
+	if err != nil {
+		return nil, err
+	}
+
+	listener, err := quic.Listen(udpConn, generateTLSConfig(), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -48,11 +63,20 @@ func Listen(addr string) (net.Listener, error) {
 }
 
 func Dial(addr net.Addr) (net.Conn, error) {
+	if udpConn == nil {
+		return nil, fmt.Errorf("监听者为空，无法建立远端连接")
+	}
 	tlsConf := &tls.Config{
 		InsecureSkipVerify: true,
 		NextProtos:         []string{"filechain-blockchain"},
 	}
-	session, err := quic.DialAddr(addr.String(), tlsConf, nil)
+
+	udpAddr, err := net.ResolveUDPAddr("udp", addr.String())
+	if err != nil {
+		return nil, err
+	}
+
+	session, err := quic.Dial(udpConn, udpAddr, addr.String(), tlsConf, nil)
 	if err != nil {
 		return nil, err
 	}
